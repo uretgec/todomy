@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Crazy simple todo list application.">
+    <title>TODOMY - Crazy Simple TODO List App</title>
+
+    <link href="assets/css/bootstrap-icons.min.css?v=BUILD_NUMBER" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css?v=BUILD_NUMBER" rel="stylesheet">
+
+    <script defer src="assets/js/mask.alpine.min.js?v=BUILD_NUMBER"></script>
+    <script defer src="assets/js/csp.alpine.min.js?v=BUILD_NUMBER"></script>
+    <script src="assets/js/main.js?v=BUILD_NUMBER"></script>
+
+     <!-- Meta Tags required for Progressive Web App -->
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+    <meta name="theme-color" content="light">
+    
+    <!-- Manifest File link -->
+    <link rel="manifest" href="manifest.json?v=BUILD_NUMBER" crossorigin="use-credentials">
+
+</head>
+    <body x-data="tdmyManager">
+        <main>
+            
+        </main>
+        
+        <script>
+            window.addEventListener('load', () => {
+              registerSW();
+            });
+         
+            // Register the Service Worker
+            async function registerSW() {
+              if ('serviceWorker' in navigator) {
+                try {
+                  await navigator
+                        .serviceWorker
+                        .register('/BUILD_GITHUB_PATH/serviceworker.js?v=BUILD_NUMBER');
+                }
+                catch (e) {
+                  console.log('SW registration failed');
+                }
+              }
+            }
+        </script>
+    </body>
+</html>
