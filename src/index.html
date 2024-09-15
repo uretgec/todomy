@@ -24,16 +24,14 @@
 </head>
     <body x-data="tdmyManager">
         <!-- Layout -->
-        <div class="layout overflow-hidden">
-            
-
+        <div class="layout">
             <!--TODO -->
-            <main class="main is-visible">
+            <main class="main">
                 <div class="container h-100">
 
                 <div class="d-flex flex-column h-100 position-relative">
                     <!--TODOs: Header -->
-                    <div class="container py-8">
+                    <!-- <div class="container py-8"> -->
                         <!-- Title -->
                         <div class="my-2">
                             <div class="d-flex align-items-center">
@@ -74,7 +72,7 @@
                                 <div class="card-body">
                                     <div class="row align-items-center gx-3">
                                         <div class="col-auto">
-                                            <input class="form-check-input mt-0" type="radio" value="">
+                                            <input class="form-check-input" type="radio" value="">
                                         </div>
 
                                         <div class="col">
@@ -133,36 +131,58 @@
                         <!--TODOs -->
 
                         <!-- TODO Form -->
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" placeholder="Title" name="title">
-                            <label for="title">Title</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" placeholder="Excerpt" name="excerpt">
-                            <label for="excerpt">Excerpt</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" placeholder="Notes" name="note"></textarea>
-                            <label for="note">Notes</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" placeholder="Categories" name="cats">
-                            <label for="cats">Categories</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" placeholder="Tags" name="tags">
-                            <label for="tags">Tags (with comas)</label>
-                        </div>
-                        <p>Time Range</p>
-                        <p>Time Repeat</p>
-                        <p>Order ID</p>
-                        <p>Badge</p>
-                        <p>ICON</p>
-                        <p>BG Color</p>
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                            <label class="form-check-label" for="flexSwitchCheckDefault">Make Sticky</label>
-                        </div>
+                        <form class="bg-light border rounded-2 py-3">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input type="color" class="form-control p-0" id="bg_color" value="#563d7c" title="Bg Color">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" placeholder="Title" name="title">
+                                            <label for="title">Title</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" placeholder="Notes" name="note"></textarea>
+                                            <label for="note">Notes</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" placeholder="Category" name="cat">
+                                            <label for="cat">Category</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" placeholder="Tags" name="tags">
+                                            <label for="tags">Tags (with comas)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                            <label class="form-check-label" for="flexSwitchCheckDefault">Make Sticky</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="datetime-local" class="form-control" placeholder="Time Start" name="time_start" value="">
+                                            <label for="time_start">Time Start</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="datetime-local" class="form-control" placeholder="Time End" name="time_end" value="">
+                                            <label for="time_end">Time End</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="w-100 btn btn-primary btn-lg" type="submit">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                         <!-- TODO Form -->
                     
 
@@ -231,7 +251,7 @@
                                         <div class="card-body">
                                             <div class="row align-items-center gx-3">
                                                 <div class="col-auto">
-                                                    <input class="form-check-input mt-0" type="radio" value="">
+                                                    <input class="form-check-input" type="radio" value="">
                                                 </div>
 
                                                 <div class="col">
@@ -251,7 +271,7 @@
                                         <div class="card-body">
                                             <div class="row align-items-center gx-3">
                                                 <div class="col-auto">
-                                                    <input class="form-check-input mt-0" type="radio" value="">
+                                                    <input class="form-check-input" type="radio" value="">
                                                 </div>
 
                                                 <div class="col">
@@ -276,7 +296,7 @@
                                         <div class="card-body">
                                             <div class="row align-items-center gx-3">
                                                 <div class="col-auto">
-                                                    <input class="form-check-input mt-0" type="radio" value="">
+                                                    <input class="form-check-input" type="radio" value="">
                                                 </div>
 
                                                 <div class="col">
@@ -291,7 +311,7 @@
                                     </a>
                                     <!-- Card -->
 
-                                <!-- Card -->
+                                    <!-- Card -->
                                     <a href="#" class="card my-2">
                                         <div class="card-body">
                                             <div class="row gx-3">
@@ -323,6 +343,167 @@
                                         </div><!-- .card-body -->
                                     </a>
                                     <!-- Card -->
+
+                                    <!-- Card -->
+                                    <a href="#" class="card my-2">
+                                        <div class="card-body">
+                                            <div class="row align-items-center gx-3">
+                                                <div class="col-auto">
+                                                    <input class="form-check-input" type="radio" value="">
+                                                </div>
+
+                                                <div class="col">
+                                                    <h6 class="mb-0">Single todo is here</h6>
+                                                </div>
+
+                                                <div class="col-auto">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </div>
+                                            </div><!-- .row -->
+                                        </div><!-- .card-body -->
+                                    </a>
+                                    <!-- Card -->
+
+                                    <!-- Card -->
+                                    <a href="#" class="card my-2">
+                                        <div class="card-body">
+                                            <div class="row align-items-center gx-3">
+                                                <div class="col-auto">
+                                                    <input class="form-check-input" type="radio" value="">
+                                                </div>
+
+                                                <div class="col">
+                                                    <h6 class="mb-0">Single todo is here</h6>
+                                                </div>
+
+                                                <div class="col-auto">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </div>
+                                            </div><!-- .row -->
+                                        </div><!-- .card-body -->
+                                    </a>
+                                    <!-- Card -->
+
+                                    <!-- Card -->
+                                    <a href="#" class="card my-2">
+                                        <div class="card-body">
+                                            <div class="row align-items-center gx-3">
+                                                <div class="col-auto">
+                                                    <input class="form-check-input" type="radio" value="">
+                                                </div>
+
+                                                <div class="col">
+                                                    <h6 class="mb-0">Single todo is here</h6>
+                                                </div>
+
+                                                <div class="col-auto">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </div>
+                                            </div><!-- .row -->
+                                        </div><!-- .card-body -->
+                                    </a>
+                                    <!-- Card -->
+
+                                    <!-- Card -->
+                                    <a href="#" class="card my-2">
+                                        <div class="card-body">
+                                            <div class="row align-items-center gx-3">
+                                                <div class="col-auto">
+                                                    <input class="form-check-input" type="radio" value="">
+                                                </div>
+
+                                                <div class="col">
+                                                    <h6 class="mb-0">Single todo is here</h6>
+                                                </div>
+
+                                                <div class="col-auto">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </div>
+                                            </div><!-- .row -->
+                                        </div><!-- .card-body -->
+                                    </a>
+                                    <!-- Card -->
+
+                                    <!-- Card -->
+                                    <a href="#" class="card my-2">
+                                        <div class="card-body">
+                                            <div class="row align-items-center gx-3">
+                                                <div class="col-auto">
+                                                    <input class="form-check-input" type="radio" value="">
+                                                </div>
+
+                                                <div class="col">
+                                                    <h6 class="mb-0">Single todo is here</h6>
+                                                </div>
+
+                                                <div class="col-auto">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </div>
+                                            </div><!-- .row -->
+                                        </div><!-- .card-body -->
+                                    </a>
+                                    <!-- Card -->
+
+                                    <!-- Card -->
+                                    <a href="#" class="card my-2">
+                                        <div class="card-body">
+                                            <div class="row align-items-center gx-3">
+                                                <div class="col-auto">
+                                                    <input class="form-check-input" type="radio" value="">
+                                                </div>
+
+                                                <div class="col">
+                                                    <h6 class="mb-0">Single todo is here</h6>
+                                                </div>
+
+                                                <div class="col-auto">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </div>
+                                            </div><!-- .row -->
+                                        </div><!-- .card-body -->
+                                    </a>
+                                    <!-- Card -->
+
+                                    <!-- Card -->
+                                    <a href="#" class="card my-2">
+                                        <div class="card-body">
+                                            <div class="row align-items-center gx-3">
+                                                <div class="col-auto">
+                                                    <input class="form-check-input" type="radio" value="">
+                                                </div>
+
+                                                <div class="col">
+                                                    <h6 class="mb-0">Single todo is here</h6>
+                                                </div>
+
+                                                <div class="col-auto">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </div>
+                                            </div><!-- .row -->
+                                        </div><!-- .card-body -->
+                                    </a>
+                                    <!-- Card -->
+
+                                    <!-- Card -->
+                                    <a href="#" class="card my-2">
+                                        <div class="card-body">
+                                            <div class="row align-items-center gx-3">
+                                                <div class="col-auto">
+                                                    <input class="form-check-input" type="radio" value="">
+                                                </div>
+
+                                                <div class="col">
+                                                    <h6 class="mb-0">Single todo is here</h6>
+                                                </div>
+
+                                                <div class="col-auto">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </div>
+                                            </div><!-- .row -->
+                                        </div><!-- .card-body -->
+                                    </a>
+                                    <!-- Card -->
+
                                 </div>
                             </div>
                         </div>
@@ -344,7 +525,7 @@
                             <!--TODO: Form -->
                         </div>
                         <!--TODO: Footer -->
-                    </div>
+                    <!-- </div> -->
                     <!--TODOs: Header -->
 
                 </div>

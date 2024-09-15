@@ -14,14 +14,6 @@
     flex-direction: column
 }
 
-.navigation {
-    border-top: 2px solid #f5f8fb;
-    padding: 0 1.25rem;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    min-height: 58px;
-}
-
 .main {
     position: relative;
     -webkit-box-flex: 1;
